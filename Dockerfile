@@ -21,6 +21,7 @@ RUN apt-get update && apt-get upgrade -y && \
     openssh-client \
     wget \
     maven \
+    jq \
     ant \
     gradle && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
