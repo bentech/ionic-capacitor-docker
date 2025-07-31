@@ -23,6 +23,7 @@ RUN apt-get update && apt-get upgrade -y && \
     maven \
     jq \
     ant \
+    zip \
     gradle && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
