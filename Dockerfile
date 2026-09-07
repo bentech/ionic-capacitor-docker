@@ -1,5 +1,5 @@
-# Use Node.js 20 LTS on Debian (bullseye) for a lighter base image
-FROM node:20-bullseye
+# Use Node.js 22 LTS on Debian Bookworm
+FROM node:22-bookworm
 
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive \
