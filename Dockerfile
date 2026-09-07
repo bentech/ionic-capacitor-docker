@@ -9,7 +9,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
     ANDROID_SDK_URL=https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip \
     ANDROID_BUILD_TOOLS_VERSION=34.0.0 \
     IONIC_VERSION=7.2.0 \
-    CAPACITOR_VERSION=7.0.1
+    CAPACITOR_VERSION=7.0.1 \
+    CAPGO_CLI_VERSION=8.45.1
 
 # Install dependencies (only necessary packages)
 RUN apt-get update && apt-get upgrade -y && \
@@ -30,6 +31,7 @@ RUN apt-get update && apt-get upgrade -y && \
     # Install Ionic
 RUN npm install -g @ionic/cli@${IONIC_VERSION} && ionic --version
 RUN npm install -g @capacitor/cli@${CAPACITOR_VERSION} && cap --version
+RUN npm install -g @capgo/cli@${CAPGO_CLI_VERSION} && capgo --version
 
 # Install Android SDK Command Line Tools
 RUN mkdir -p ${ANDROID_SDK_ROOT}/cmdline-tools && \
